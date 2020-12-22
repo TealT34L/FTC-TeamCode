@@ -14,7 +14,7 @@ public class FIRSTOpMode extends LinearOpMode {
 
     @Override
     public void runOpMode() throws InterruptedException {
-        motorTest = hardwareMap.get(DcMotor.class, "motor1");
+        motorTest = hardwareMap.get(DcMotor.class, "motor2");
         waitForStart();
         DcMotorSimple.Direction dir = DcMotorSimple.Direction.FORWARD;
         motorTest.setDirection(dir);
@@ -31,7 +31,6 @@ public class FIRSTOpMode extends LinearOpMode {
             telemetry.addData("Status", "power: " + motorTest.getPower());
             telemetry.update();
         }
-
         motorTest.setPower(0);
     }
 }
